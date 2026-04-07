@@ -9,15 +9,15 @@ export default function PerfilScreen({ navigation }) {
     <View style={styles.container}>
       <View style={styles.header}>
         <View style={styles.avatar}>
-          <Text style={styles.avatarText}>{login}</Text>
+          <Text style={styles.avatarText}>{login.nome.charAt(0)}</Text>
         </View>
-        <Text style={styles.nome}>{login}</Text>
+        <Text style={styles.nome}>{login.nome}</Text>
       </View>
 
       <View style={styles.infoContainer}>
-        <Text style={styles.label}>Nome: </Text>
-        <Text style={styles.label}>E-mail: </Text>
-        <Text style={styles.label}>CPF: </Text>
+        <Text style={styles.label}>Nome: {login.nome}</Text>
+        <Text style={styles.label}>E-mail: {login.email} </Text>
+        <Text style={styles.label}>CPF: {login.cpf}</Text>
       </View>
       <Pressable
         style={styles.botao}
@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 40,
     fontWeight: 'bold',
+    maxWidth: '100%'
   },
   nome: {
     fontSize: 24,

@@ -22,7 +22,7 @@ export function Login() {
   }
 
   function validarLogin() {
-    if (loginDigitado != login) {
+    if (loginDigitado != login.email) {
       alert('Erro, login incorreto!');
     } else if (senhaDigitada != senha) {
       alert('Erro, senha incorreta!');
